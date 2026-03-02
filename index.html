@@ -41,4 +41,56 @@
 <h1>Kontak Admin Toko</h1>
 <p>Kontak admin toko disediakan untuk memudahkan pelanggan dalam memperoleh informasi dan bantuan terkait produk maupun layanan. Melalui kontak admin, pelanggan dapat menanyakan ketersediaan barang, harga, pemesanan, hingga pengaduan atau saran. Admin toko siap merespons dengan ramah dan profesional melalui media komunikasi yang tersedia, seperti telepon, pesan singkat, atau aplikasi chat. Dengan adanya kontak admin toko, komunikasi antara pelanggan dan toko dapat terjalin dengan cepat, jelas, dan efektif.</p>
 </body>
+
+ <div class="container">
+  <div class="stat-card">
+    <span class="counter" data-target="1000">0</span>
+    <span class="label">Pengunjung Puas</span>
+  </div>
+
+  <div class="stat-card">
+    <span class="counter" data-target="85">0</span>
+    <span class="label">Data Pengunjung</span>
+  </div>
+
+  <div class="stat-card">
+    <span class="counter" data-target="1200">0</span>
+    <span class="label">Buku Favorit</span>
+  </div>
+
+  <div class="stat-card">
+    <span class="counter" data-target="50">0</span>
+    <span class="label">Pengunjung Terbaik</span>
+  </div>
+
+  <div class="stat-card">
+    <span class="counter" data-target="99">0</span>
+    <span class="label">Rating Positif</span>
+  </div>
+</div>
+<script>
+  const counters = document.querySelectorAll('.counter');
+  
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      
+      // Mengatur durasi animasi agar halus
+      const speed = 150; 
+      const increment = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 15);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  });
+</script>
+
+
 </html>
