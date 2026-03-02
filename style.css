@@ -229,3 +229,38 @@ label{color:#27ae60}
 
 
 
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Agar responsif di HP */
+    gap: 20px;
+    padding: 50px;
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .stat-card {
+    background: white;
+    padding: 0px;
+    border-radius: 0px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .counter {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+
+  .label {
+    color: #7f8c8d;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
